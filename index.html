@@ -10,12 +10,26 @@
   </head>
   <body>
 
+    <!-- VoteItem template -->
     <script id="voteItemTemplate" type="text/template">
       <div>
-        <h1><%= title %></h1>
-        <!-- TODO: Vote buttons (plus and minus) -->
+        <h1 class="text-center"><%= title %></h1>
+        <span class="text-left"><%= votes %></span>
+        <span>
+          <!-- Vote up -->
+          <i class="glyphicon glyphicon-plus pull-right"></i>
+          <!-- Vote down -->
+          <i class="glyphicon glyphicon-minus pull-right"></i>
+        </span>
       </div>
     </script>
+
+    <!-- VoteItemCollection template -->
+    <script id="voteItemContainer" type="text/template">
+      <h1>Current Poll</h1>
+      <ul id="voteItems"></ul>
+    </script>
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
